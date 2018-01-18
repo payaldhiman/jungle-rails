@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <p>Thanks for order and have a great day!</p>
+
+    <% @items.each do | item | %>
+      <%= item.product_id %>
+      <%= Product.find(item.product_id).name %>
+    <% end %>
+  </body>
+</html>
