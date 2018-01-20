@@ -1,6 +1,11 @@
 <% @product.reviews.reverse.each do |review| %>
-  <dt>Rating</dt>
-  <dd><%= review.rating %></dd>
-  <dt>Description</dt>
-  <dd><%= review.description %></dd>
+  <div class="col-sm-5 col-md-6">
+    <tr>
+      <td><%= review.rating %></td>
+      <td><%= review.description %></td>
+      <td><%= link_to fa_icon('trash'), [@product, review], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %> </td>
+    </tr>
+  </div>
+
+
 <% end %>

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+
   def index
     @categories = Category.all.order(created_at: :desc)
   end
@@ -6,4 +7,5 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find params[:id]
   end
+
 end

@@ -15,7 +15,6 @@
         </tr>
       </thead>
       <tbody>
-
         <% @cart_total = 0 %>
         <% cart.each do |product_id, details| %>
           <%= render 'item', product_id: product_id, details: details %>
@@ -50,13 +49,12 @@
           </script>
         <% end %>
       </div>
-      <% else %>
-        <p>
-          Please add items to cart.
-        </p>
-
-        <%= link_to "Home", root_path, class: 'btn btn-lg btn-primary' %>
-      <% end %>
+  <% else %>
+    <p>
+      Please add items to cart.
+    </p>
+    <%= link_to "Home", root_path, class: 'btn btn-lg btn-primary' %>
+  <% end %>
   </div>
 
 </section>

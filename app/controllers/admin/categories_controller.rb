@@ -1,7 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   http_basic_authenticate_with name: "Jungle", password: "Book"
 
-
   def index
     @categories = Category.order(id: :desc).all
   end
@@ -10,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.new
   end
 
-    def show
+  def show
     @category = Category.find params[:id]
   end
 
@@ -22,6 +21,7 @@ class Admin::CategoriesController < ApplicationController
     else
       render :new
     end
+
   end
 
   def destroy
@@ -33,10 +33,7 @@ class Admin::CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(
-      :name
-
-    )
+    params.require(:category).permit(:name)
   end
 
 end

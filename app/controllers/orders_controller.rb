@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @line_items = LineItem.includes(:product).where(order_id: params[:id])
-
   end
 
   def create
@@ -18,8 +17,8 @@ class OrdersController < ApplicationController
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
     end
 
-  rescue Stripe::CardError => e
-    redirect_to cart_path, flash: { error: e.message }
+    rescue Stripe::CardError => e
+      redirect_to cart_path, flash: { error: e.message }
   end
 
   private
