@@ -26,6 +26,28 @@
       </div>
     </div>
 
+    <h1>Enter Reviews</h1>
+    <%= form_for [@product, @review] do |f| %>
+      <%= label_tag "Rating:" %>
+      <%= f.select :rating, ['1', '2', '3', '4', '5']%>
+
+      <%= label_tag "Description:" %>
+      <%= f.text_field :description %>
+
+
+      <%= f.submit "Submit" %>
+    <% end %>
+
+    <h1>Reviews</h1>
+
+    <div class="col-sm-8">
+      <dl class="dl-horizontal">
+        <%= render 'reviews' %>
+      </dl>
+    </div>
+
+
+
   </article>
 
 </section>
