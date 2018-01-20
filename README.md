@@ -15,6 +15,13 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 8. Put Stripe (test) keys into appropriate .env vars
 9. Run `bin/rails s -b 0.0.0.0` to start the server
 
+## Screenshots
+!["Screenshots of home page"](https://github.com/payaldhiman/jungle-rails/blob/master/doc/home.png)
+!["Screenshots of empty cart"](https://github.com/payaldhiman/jungle-rails/blob/master/doc/emptycart.png)
+!["Screenshots of product details"](https://github.com/payaldhiman/jungle-rails/blob/master/doc/productdetails.png)
+
+
+
 ## Stripe Testing
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
